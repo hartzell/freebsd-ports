@@ -10,6 +10,7 @@ CATEGORIES=	www
 MAINTAINER=	hartzell@alerce.com
 COMMENT=	My custom caddy + plugins
 
+# arguably, ca_root_nss should be a go RUN_DEPENDS, ports bug filed #237986
 BUILD_DEPENDS=	git>=0:devel/git ca_root_nss>=0:security/ca_root_nss
 RUN_DEPENDS=	ca_root_nss>=0:security/ca_root_nss$
 
