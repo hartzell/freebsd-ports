@@ -10,8 +10,8 @@ CATEGORIES=	www
 MAINTAINER=	hartzell@alerce.com
 COMMENT=	My custom caddy + plugins
 
-BUILD_DEPENDS=	ca_root_nss>=0:security/ca_root_nss
-RUN_DEPENDS=	${BUILD_DEPENDS}
+BUILD_DEPENDS=	git>=0:devel/git ca_root_nss>=0:security/ca_root_nss
+RUN_DEPENDS=	ca_root_nss>=0:security/ca_root_nss$
 
 USES=		go
 USE_GITHUB=	yes
