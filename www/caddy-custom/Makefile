@@ -1,30 +1,29 @@
 # $FreeBSD$
 
 PORTNAME=	caddy-custom
-APPNAME=caddy
 DISTVERSIONPREFIX=	v
-DISTVERSION=	0.0.2
+DISTVERSION=	0.0.3
 PORTREVISION=	1
 CATEGORIES=	www
 
 MAINTAINER=	hartzell@alerce.com
 COMMENT=	My custom caddy + plugins
 
+LICENSE=	BSD3CLAUSE
+
 # arguably, ca_root_nss should be a go RUN_DEPENDS, ports bug filed #237986
 BUILD_DEPENDS=	git>=0:devel/git ca_root_nss>=0:security/ca_root_nss
 RUN_DEPENDS=	ca_root_nss>=0:security/ca_root_nss$
 
 USES=		go
+GO_PKGNAME=	github.com/${GH_ACCOUNT}/${PORTNAME}
 USE_GITHUB=	yes
 GH_ACCOUNT=	hartzell
 
-GO_PKGNAME=	github.com/${GH_ACCOUNT}/${PORTNAME}
-
 PLIST_FILES=	bin/caddy etc/rc.d/caddy
-
 CONFLICTS_INSTALL=	caddy
 
-OPTIONS_DEFINE=CGI DOCKER-PROXY FILTER GIT S3BROWSER TELEMETRY WEBDAV
+OPTIONS_DEFINE=	CGI DOCKER-PROXY FILTER GIT S3BROWSER TELEMETRY WEBDAV
 CGI_DESC=	Enable the cgi plugin
 CGI_VARS=	caddy_tags+=cgi
 DOCKER-PROXY_DESC=	Enable the docker-proxy plugin
@@ -40,6 +39,7 @@ TELEMETRY_VARS=	caddy_tags+=telemetry
 WEBDAV_DESC=	Enable the webdav plugin
 WEBDAV_VARS=	caddy_tags+=webdav
 
+APPNAME=caddy
 
 do-build:
 	@cd ${WRKSRC} && ${SETENV} ${MAKE_ENV} ${GO_ENV} ${GO_CMD} build -tags "${CADDY_TAGS}"
