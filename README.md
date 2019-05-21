@@ -10,13 +10,13 @@ Merge it into the ports tree with [portshaker], perhaps with help from
 On a ZFS based system, install [portshaker] and [portshaker-config], then
 
 ``` shell
-sudo zfs create zroot/usr/portshaker
+zfs create zroot/usr/portshaker
 ```
 
 and
 
 ``` shell
-sudo cat > /usr/local/etc/portshaker.conf << LOLCAT
+cat > /usr/local/etc/portshaker.conf << LOLCAT
 use_zfs="yes"
 
 mirror_base_dir="/usr/portshaker"
@@ -30,8 +30,8 @@ LOLCAT
 and finally
 
 ``` shell
-sudo portshaker -U
-sudo portshaker -M
+portshaker -U
+portshaker -M
 ```
 
 at which point you'll have a copy of the FreeBSD ports tree in
