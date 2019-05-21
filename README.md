@@ -7,7 +7,8 @@ Merge it into the ports tree with [portshaker], perhaps with help from
 
 ## Portshaker
 
-On a ZFS based system, install [portshaker] and [portshaker-config], then
+On a ZFS based system, install [portshaker], [portshaker-config], and `git`, 
+then:
 
 ``` shell
 zfs create zroot/usr/portshaker
