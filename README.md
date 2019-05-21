@@ -22,9 +22,13 @@ use_zfs="yes"
 
 mirror_base_dir="/usr/portshaker"
 
-ports_trees="main"
-main_ports_tree="/usr/portshaker/main"
-main_merge_from="ports github:hartzell:freebsd-ports"
+poudriere_dataset="zbuilder/poudriere"
+poudriere_ports_mountpoint="/usr/local/poudriere/ports"
+
+ports_trees="ports_and_hartzell"
+
+ports_and_hartzell_poudriere_tree="ports_and_hartzell"
+ports_and_hartzell_merge_from="ports github:hartzell:freebsd-ports"
 LOLCAT
 ```
 
