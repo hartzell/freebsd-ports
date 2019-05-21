@@ -20,6 +20,7 @@ GO_PKGNAME=	github.com/${GH_ACCOUNT}/${PORTNAME}
 USE_GITHUB=	yes
 GH_ACCOUNT=	hartzell
 
+SUB_FILES=	pkg-message
 PLIST_FILES=	bin/caddy etc/rc.d/caddy
 CONFLICTS_INSTALL=	caddy
 
