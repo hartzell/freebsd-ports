@@ -46,7 +46,7 @@ load_rc_config ${name}
 
 : ${caddy_enable:="NO"}
 : ${caddy_cert_email=""}
-: ${caddy_bin_path="/usr/local/bin/caddy-custom"}
+: ${caddy_bin_path="/usr/local/bin/caddy"}
 : ${caddy_cpu="99%"} # was a bug for me that caused a crash within jails
 : ${caddy_config_path="/usr/local/www/Caddyfile"}
 : ${caddy_logfile="/var/log/caddy.log"}
