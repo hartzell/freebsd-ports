@@ -28,6 +28,12 @@ SHEBANG_FILES=	findoid sanoid sleepymutex syncoid
 post-patch:
 	@${REINPLACE_CMD} -i '' -e 's|/etc/sanoid|${PREFIX}/etc/sanoid|' \
 		${WRKSRC}/sanoid
+	@${REINPLACE_CMD} -i '' \
+		-e 's|/usr/bin/lzop|${PREFIX}/bin/lzop|' \
+		-e 's|/usr/bin/mbuffer|${PREFIX}/bin/mbuffer|' \
+		-e 's|/usr/bin/pv|${PREFIX}/bin/pv|' \
+		-e 's|/usr/bin/sudo|${PREFIX}/bin/sudo|' \
+		${WRKSRC}/syncoid
 
 do-build:
 
@@ -36,9 +42,10 @@ do-install:
 	${INSTALL_SCRIPT} ${WRKSRC}/sanoid ${STAGEDIR}${PREFIX}/bin
 	${INSTALL_SCRIPT} ${WRKSRC}/sleepymutex ${STAGEDIR}${PREFIX}/bin
 	${INSTALL_SCRIPT} ${WRKSRC}/syncoid ${STAGEDIR}${PREFIX}/bin
+	@${MKDIR} ${STAGEDIR}/${ETCDIR}
 	${INSTALL_DATA} ${WRKSRC}/sanoid.defaults.conf \
-		${STAGEDIR}${PREFIX}/etc/sanoid.defaults.conf
+		${STAGEDIR}${ETCDIR}/sanoid.defaults.conf
 	${INSTALL_DATA} ${WRKSRC}/sanoid.conf \
-		${STAGEDIR}${PREFIX}/etc/sanoid.conf.sample
+		${STAGEDIR}${ETCDIR}/sanoid.conf.sample
 
 .include <bsd.port.mk>
