@@ -2,6 +2,7 @@
 
 PORTNAME=	gh-logitechmediaserver
 PORTVERSION=	7.9.2.g2018.12.10
+PORTREVISION=	1
 CATEGORIES=	audio
 
 MAINTAINER=	ports@FreeBSD.org
