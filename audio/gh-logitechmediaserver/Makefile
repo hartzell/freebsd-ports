@@ -1,6 +1,6 @@
 # $FreeBSD: head/audio/logitechmediaserver/Makefile 511310 2019-09-06 12:38:31Z adamw $
 
-PORTNAME=	logitechmediaserver
+PORTNAME=	gh-logitechmediaserver
 PORTVERSION=	7.9.2.g2018.12.10
 CATEGORIES=	audio
 
