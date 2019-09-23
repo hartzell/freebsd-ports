@@ -19,6 +19,8 @@ BUILD_DEPENDS=	nasm:devel/nasm \
 		bash:shells/bash \
 		rsync:net/rsync
 LIB_DEPENDS=	libgd.so:graphics/gd
+RUN_DEPENDS=ca_root_nss>0:security/ca_root_nss \
+                p5-IO-Socket-SSL>0:security/p5-IO-Socket-SSL
 
 USES=		gettext-runtime gmake perl5 shebangfix
 USE_GITHUB=	yes
