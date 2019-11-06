@@ -2,5 +2,5 @@ bin/findoid
 bin/sanoid
 bin/sleepymutex
 bin/syncoid
-%%ETCDIR%%/sanoid.conf.sample
 %%ETCDIR%%/sanoid.defaults.conf
+@sample %%ETCDIR%%/sanoid.conf.sample
