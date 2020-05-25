@@ -25,6 +25,7 @@ etc/newsyslog.conf.d/logitechmediaserver.conf
 %%SLIMDIR%%/CPAN/AnyEvent/AIO.pm
 %%SLIMDIR%%/CPAN/AnyEvent/Debug.pm
 %%SLIMDIR%%/CPAN/AnyEvent/Impl/EV.pm
+%%SLIMDIR%%/CPAN/AnyEvent/Socket.pm
 %%SLIMDIR%%/CPAN/AnyEvent/Strict.pm
 %%SLIMDIR%%/CPAN/AnyEvent/TLS.pm
 %%SLIMDIR%%/CPAN/AnyEvent/Util.pm
