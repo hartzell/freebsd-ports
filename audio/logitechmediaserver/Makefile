@@ -24,8 +24,8 @@ RUN_DEPENDS=ca_root_nss>0:security/ca_root_nss \
 
 USES=		gettext-runtime gmake perl5 shebangfix
 USE_GITHUB=	yes
-GH_TUPLE=	Logitech:slimserver:7938c06 \
-		Logitech:slimserver-vendor:7938c06:vendor
+GH_TUPLE=	Logitech:slimserver:7938c0 \
+		Logitech:slimserver-vendor:7938c0:vendor
 USE_RC_SUBR=	logitechmediaserver
 SHEBANG_FILES=	Bin/darwin/check-update.pl \
 		Bin/dbish \
