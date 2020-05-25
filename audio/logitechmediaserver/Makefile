@@ -2,7 +2,7 @@
 
 PORTNAME=	logitechmediaserver
 PORTVERSION=	7.9.2
-PORTREVISION=	2
+PORTREVISION=	3
 CATEGORIES=	audio
 
 MAINTAINER=	ports@FreeBSD.org
