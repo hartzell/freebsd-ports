@@ -24,9 +24,7 @@ etc/newsyslog.conf.d/logitechmediaserver.conf
 %%SLIMDIR%%/CPAN/AnyEvent.pm
 %%SLIMDIR%%/CPAN/AnyEvent/AIO.pm
 %%SLIMDIR%%/CPAN/AnyEvent/Debug.pm
-%%SLIMDIR%%/CPAN/AnyEvent/Handle.pm
 %%SLIMDIR%%/CPAN/AnyEvent/Impl/EV.pm
-%%SLIMDIR%%/CPAN/AnyEvent/Socket.pm
 %%SLIMDIR%%/CPAN/AnyEvent/Strict.pm
 %%SLIMDIR%%/CPAN/AnyEvent/TLS.pm
 %%SLIMDIR%%/CPAN/AnyEvent/Util.pm
@@ -2144,11 +2142,6 @@ etc/newsyslog.conf.d/logitechmediaserver.conf
 %%SLIMDIR%%/Slim/Plugin/Favorites/Settings.pm
 %%SLIMDIR%%/Slim/Plugin/Favorites/install.xml
 %%SLIMDIR%%/Slim/Plugin/Favorites/strings.txt
-%%SLIMDIR%%/Slim/Plugin/Flickr/HTML/EN/plugins/Flickr/html/images/icon.png
-%%SLIMDIR%%/Slim/Plugin/Flickr/HTML/EN/plugins/Flickr/html/images/icon_40x40_m.png
-%%SLIMDIR%%/Slim/Plugin/Flickr/Plugin.pm
-%%SLIMDIR%%/Slim/Plugin/Flickr/install.xml
-%%SLIMDIR%%/Slim/Plugin/Flickr/strings.txt
 %%SLIMDIR%%/Slim/Plugin/FullTextSearch/Plugin.pm
 %%SLIMDIR%%/Slim/Plugin/FullTextSearch/install.xml
 %%SLIMDIR%%/Slim/Plugin/FullTextSearch/strings.txt
@@ -2208,12 +2201,6 @@ etc/newsyslog.conf.d/logitechmediaserver.conf
 %%SLIMDIR%%/Slim/Plugin/LineOut/Plugin.pm
 %%SLIMDIR%%/Slim/Plugin/LineOut/install.xml
 %%SLIMDIR%%/Slim/Plugin/LineOut/strings.txt
-%%SLIMDIR%%/Slim/Plugin/Live365/HTML/EN/plugins/Live365/html/images/icon.png
-%%SLIMDIR%%/Slim/Plugin/Live365/HTML/EN/plugins/Live365/html/images/icon_40x40_m.png
-%%SLIMDIR%%/Slim/Plugin/Live365/Plugin.pm
-%%SLIMDIR%%/Slim/Plugin/Live365/ProtocolHandler.pm
-%%SLIMDIR%%/Slim/Plugin/Live365/install.xml
-%%SLIMDIR%%/Slim/Plugin/Live365/strings.txt
 %%SLIMDIR%%/Slim/Plugin/MOG/HTML/EN/plugins/MOG/html/images/icon.png
 %%SLIMDIR%%/Slim/Plugin/MOG/Plugin.pm
 %%SLIMDIR%%/Slim/Plugin/MOG/ProtocolHandler.pm
