@@ -25,7 +25,6 @@ etc/newsyslog.conf.d/logitechmediaserver.conf
 %%SLIMDIR%%/CPAN/AnyEvent/AIO.pm
 %%SLIMDIR%%/CPAN/AnyEvent/Debug.pm
 %%SLIMDIR%%/CPAN/AnyEvent/Impl/EV.pm
-%%SLIMDIR%%/CPAN/AnyEvent/Socket.pm
 %%SLIMDIR%%/CPAN/AnyEvent/Strict.pm
 %%SLIMDIR%%/CPAN/AnyEvent/TLS.pm
 %%SLIMDIR%%/CPAN/AnyEvent/Util.pm
@@ -2595,7 +2594,9 @@ etc/newsyslog.conf.d/logitechmediaserver.conf
 %%SLIMDIR%%/icudt58b.dat
 %%SLIMDIR%%/icudt58l.dat
 %%SLIMDIR%%/lib/AnyEvent/DNS.pm
+%%SLIMDIR%%/lib/AnyEvent/Handle.pm
 %%SLIMDIR%%/lib/AnyEvent/Impl/PerfMonEV.pm
+%%SLIMDIR%%/lib/AnyEvent/Socket.pm
 %%SLIMDIR%%/lib/Audio/Scan.pm
 %%SLIMDIR%%/lib/CGI/Cookie.pm
 %%SLIMDIR%%/lib/Cache/FileBackend.pm
