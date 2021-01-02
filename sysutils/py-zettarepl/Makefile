@@ -6,7 +6,8 @@ PORTREVISION=	26
 CATEGORIES=	sysutils python
 PKGNAMEPREFIX=	${PYTHON_PKGNAMEPREFIX}
 
-MAINTAINER=	vladimirv@ixsystems.com
+# My fork of FreeNAS' port for zettarepl
+MAINTAINER=	hartzell@alerce.com
 COMMENT=	Cross-platform ZFS replication solution
 
 RUN_DEPENDS=	${PYTHON_PKGNAMEPREFIX}coloredlogs>0:devel/py-coloredlogs@${PY_FLAVOR} \
