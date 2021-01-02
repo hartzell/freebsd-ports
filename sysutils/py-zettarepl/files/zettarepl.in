@@ -1,0 +1,32 @@
+#!/bin/sh
+
+# $FreeBSD$
+#
+# PROVIDE: zettarepl
+# REQUIRE: LOGIN
+# KEYWORD: shutdown
+#
+# Add these lines to /etc/rc.conf.local or /etc/rc.conf
+# to enable this service:
+#
+# zettarepl_enable (bool): Set to NO by default.
+#                          Set it to YES to enable zettarepl.
+# zettarepl_config (path): Set to %%PREFIX%%/etc/zettarepl/zettarepl.yaml
+#                          by default.
+
+. /etc/rc.subr
+
+name=zettarepl
+rcvar=zettarepl_enable
+
+load_rc_config $name
+
+: ${zettarepl_enable:="NO"}
+: ${zettarepl_config="%%PREFIX%%/etc/zettarepl/zettarepl.yaml"}
+
+command=%%PREFIX%%/bin/${name}
+pidfile=/var/run/${name}.pid
+
+command_args="-p $pidfile -f $zettarepl_config"
+
+run_rc_command "$1"
