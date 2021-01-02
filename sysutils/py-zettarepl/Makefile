@@ -9,7 +9,7 @@ PKGNAMEPREFIX=	${PYTHON_PKGNAMEPREFIX}
 MAINTAINER=	vladimirv@ixsystems.com
 COMMENT=	Cross-platform ZFS replication solution
 
-USES=		python:3.6+
+USES=		python:3.8+
 USE_PYTHON=	autoplist distutils
 USE_GITHUB=	yes
 GH_ACCOUNT=	freenas
