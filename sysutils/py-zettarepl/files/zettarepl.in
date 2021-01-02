@@ -25,8 +25,7 @@ load_rc_config $name
 : ${zettarepl_config="%%PREFIX%%/etc/zettarepl/zettarepl.yaml"}
 
 command=%%PREFIX%%/bin/${name}
-pidfile=/var/run/${name}.pid
-
-command_args="-p $pidfile -f $zettarepl_config"
+command_args="-f $zettarepl_config"
+command_interpreter="%%PYTHON_CMD%%"
 
 run_rc_command "$1"
