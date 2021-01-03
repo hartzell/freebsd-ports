@@ -26,6 +26,6 @@ load_rc_config $name
 
 command=%%PREFIX%%/bin/${name}
 command_args="-f $zettarepl_config"
-command_interpreter="%%PYTHON_CMD%%"
+command_interpreter=%%PYTHON_CMD%%
 
 run_rc_command "$1"
