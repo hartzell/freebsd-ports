@@ -44,7 +44,7 @@
    }
 
    zettarepl_cleanup() {
-       [ -f ${pidfile} ] && %%RM%% ${pidfile}
+       [ -f ${pidfile} ] && /bin/rm ${pidfile}
    }
 
    run_rc_command "$1"
