@@ -22,7 +22,7 @@ RUN_DEPENDS=	${PYTHON_PKGNAMEPREFIX}coloredlogs>0:devel/py-coloredlogs@${PY_FLAV
 USES=		python:3.8+
 USE_PYTHON=	autoplist distutils
 USE_GITHUB=	yes
-GH_ACCOUNT=	freenas
+GH_ACCOUNT=	hartzell-forks
 GH_TAGNAME=	d9058fac17b618cdb73b17eb86fd234a414d7636
 USE_RC_SUBR= zettarepl
 

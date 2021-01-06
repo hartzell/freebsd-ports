@@ -23,9 +23,21 @@ load_rc_config $name
 
 : ${zettarepl_enable:="NO"}
 : ${zettarepl_config="%%PREFIX%%/etc/zettarepl/zettarepl.yaml"}
+: ${zettarepl_user=${zettarepl_user:-"daemon"}
 
+pidfile=/var/run/zettarepl.pid
 command=%%PREFIX%%/bin/${name}
 command_args="-f $zettarepl_config"
 command_interpreter=%%PYTHON_CMD%%
+
+zettarepl_start() {
+    echo "Starting zettarepl."
+    %$TOUCH%% ${pidfile} && %%CHOWN%% ${zettarepl_user} ${pidfile}
+        /usr/sbin/daemon -cf -p ${pidfile} -u ${zettarepl_user} ${standalone} ${zettarepl_flags}
+}
+
+zettarepl_cleanup() {
+    [ -f ${pidfile} ] && %%RM%% ${pidfile}
+}
 
 run_rc_command "$1"
