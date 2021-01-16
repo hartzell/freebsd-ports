@@ -2,8 +2,8 @@
 
 PORTNAME=	caddy-custom
 DISTVERSIONPREFIX=	v
-DISTVERSION=	0.0.4
-PORTREVISION=	2
+DISTVERSION=	0.0.5
+PORTREVISION=	1
 CATEGORIES=	www
 
 MAINTAINER=	hartzell@alerce.com
@@ -15,7 +15,7 @@ LICENSE=	APACHE20
 BUILD_DEPENDS=	git>=0:devel/git ca_root_nss>=0:security/ca_root_nss
 RUN_DEPENDS=	ca_root_nss>=0:security/ca_root_nss
 
-USES=		go
+USES=		go:modules
 GO_PKGNAME=	github.com/${GH_ACCOUNT}/${PORTNAME}
 USE_GITHUB=	yes
 GH_ACCOUNT=	hartzell
@@ -46,7 +46,8 @@ do-build:
 	@cd ${WRKSRC} && ${SETENV} ${MAKE_ENV} ${GO_ENV} ${GO_CMD} build -tags "${CADDY_TAGS}"
 
 do-install:
-	${INSTALL_PROGRAM} ${WRKSRC}/${APPNAME} \
+        # built as caddy-custom, installed as caddy
+	${INSTALL_PROGRAM} ${WRKSRC}/${APPNAME}-custom \
 		${STAGEDIR}/${PREFIX}/bin/${APPNAME}
 	${INSTALL_SCRIPT} dist/init/freebsd/${APPNAME} \
 		${STAGEDIR}/${PREFIX}/etc/rc.d/${APPNAME}
