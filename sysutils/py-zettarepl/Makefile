@@ -25,5 +25,8 @@ USE_GITHUB=	yes
 GH_ACCOUNT=	hartzell-forks
 GH_TAGNAME=	8a42f46695797bdbe4977958e2a6fdb59eb6826f
 USE_RC_SUBR= zettarepl
+SUB_LIST=	PYTHON_CMD=${PYTHON_CMD} \
+		ECHO=${ECHO} EGREP=${EGREP} TOUCH=${TOUCH} \
+		CHOWN=${CHOWN} RM=${RM:Q}
 
 .include <bsd.port.mk>
