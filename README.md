@@ -5,10 +5,15 @@ My ports add-ons collection.
 Merge it into the ports tree with [portshaker], perhaps with help from
 [portshaker-config].
 
+Note that, in 202212, I removed all of my outdated "custom" ports but
+left this empty tree so that I didn't have to change my infra setup
+and could add custom ports again in the future.  Look back to the
+v202112 tag for a variety of custom ports I had been using.
+
 ## Portshaker
 
-On a ZFS based system, install [portshaker], [portshaker-config], and `git`, 
-then:
+On a ZFS based system, install [portshaker], [portshaker-config], and
+`git`, then:
 
 ``` shell
 zfs create zroot/usr/portshaker
